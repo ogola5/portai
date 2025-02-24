@@ -1,6 +1,12 @@
 require("@nomicfoundation/hardhat-toolbox");
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.28",
+  solidity: "0.8.20",
+  networks: {
+    aurora_testnet: {
+      url: "https://testnet.aurora.dev",
+      accounts: ["YOUR_PRIVATE_KEY"], // From NEAR Wallet, export private key
+      chainId: 1313161555,
+    },
+  },
 };
